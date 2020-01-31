@@ -20,7 +20,7 @@ object Lists {
 
     case Nil => 0// If the list is empty NoSuchElementException is thrown
     case head :: Nil => 1 // If the list contains only one element then the total number is 1
-    case _ :: tail => list.length // If the list contains more than one element, the number of elements is retrieved
+    case head :: tail => 1 + noOfElements(tail) // The list contains more than one element and so the method is called again recursively
   }
 
 }
