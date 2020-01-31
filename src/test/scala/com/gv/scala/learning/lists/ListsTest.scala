@@ -39,12 +39,24 @@ class ListsTest extends AnyWordSpec {
     "contains a single element" should {
       "return a total of 1 element only" in {
 
-        assertResult(1)(Lists.noOfElements('b' :: Nil))
+        assertResult(1)(Lists.noOfElements(List('b')))
 
       }
 
 
     }
+    "contains more than one element" should {
+      "return the total number of elements in list" in {
+
+        assertResult(3)(Lists.noOfElements(List('a', 'b', 'c' )))
+
+      }
+
+
+    }
+
+
+
 
   }
 }
