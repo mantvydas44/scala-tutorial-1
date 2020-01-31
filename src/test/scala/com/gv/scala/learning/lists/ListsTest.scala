@@ -64,9 +64,5 @@ class ListsTest extends AnyWordSpec {
       }
 
     }
-
-
-
-
   }
 }
