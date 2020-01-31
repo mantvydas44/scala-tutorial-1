@@ -19,7 +19,7 @@ object Lists {
   def noOfElements[Any](list: List[Any]) : Int = list match{
 
     case Nil => 0// If the list is empty NoSuchElementException is thrown
-    case head :: Nil => 1 // If the list contains only one element then the total number is 1
+
     case head :: tail => 1 + noOfElements(tail) // The list contains more than one element and so the method is called again recursively
   }
 
