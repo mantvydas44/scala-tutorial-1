@@ -55,6 +55,16 @@ class ListsTest extends AnyWordSpec {
 
     }
 
+    "completely empty" should {
+
+      "throw a NoSuchElementException when the last element is requested" in {
+
+        assertThrows[NoSuchElementException](Lists.noOfElements(List()))
+
+      }
+
+    }
+
 
 
 
