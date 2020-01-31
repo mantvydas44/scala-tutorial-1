@@ -1,8 +1,11 @@
 package com.gv.scala.learning.lists
 
+import scala.annotation.tailrec
+
 object Lists {
 
 
+  @tailrec
   def last[A](list: List[A]): A = list match {
 
     //case List.empty[A] =>
