@@ -1,5 +1,6 @@
 package com.gv.scala.learning.lists
 
+import com.sun.xml.internal.bind.v2.schemagen.xmlschema.Any
 import org.scalatest.wordspec.AnyWordSpec
 
 class ListsTest extends AnyWordSpec {
@@ -113,30 +114,36 @@ class ListsTest extends AnyWordSpec {
 
        assertResult(List(1,2,3,4,5,6))(Lists.flatten(List(List(1), 2, List(3, 4, 5, 6))))
 
-
-
-
-
      }
 
-
-
    }
-
    "the list is empty" should{
 
      "should return nil" in{
 
        assertResult(Nil)(Lists.flatten(List()))
-
-
-
      }
 
    }
 
  }
 
+  "A list of symbols" when {
+    "full" should {
+      "return a packed list" in {
+        assertResult(
+          List(List('a, 'a, 'a, 'a), List('b), List('c, 'c), List('a, 'a), List('d), List('e, 'e, 'e, 'e))
+        )(
+          Lists.pack(List('a, 'a, 'a, 'a, 'b, 'c, 'c, 'a, 'a, 'd, 'e, 'e, 'e, 'e))
+        )
+      }
+    }
+    "empty" should {
+      "return an empty list" in {
+        assert(Lists.pack(List()).isEmpty)
+      }
+    }
+  }
 }
 
 
