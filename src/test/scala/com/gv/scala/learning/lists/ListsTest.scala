@@ -127,7 +127,6 @@ class ListsTest extends AnyWordSpec {
    }
 
  }
-
   "A list of symbols" when {
     "full" should {
       "return a packed list" in {

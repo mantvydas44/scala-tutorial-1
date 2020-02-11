@@ -2,6 +2,8 @@ package com.gv.scala.learning.lists
 
 import java.util.NoSuchElementException
 
+import com.gv.scala.learning.lists.Lists.Cats
+
 import scala.annotation.tailrec
 
 
@@ -75,4 +77,13 @@ object Lists {
     }
     pack2(List(), List(), list)
   }
+
+  class Cats(val name: String, val colour: String, val food: String) {
+
+    def theCat = "The cat is " + name + "and its coulour is  " + colour + ". The cat likes to eat " + food
+
+
+  }
+
+
 }
